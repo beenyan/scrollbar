@@ -3,13 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>拉桿美術調整</title>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .header{
+            padding-top: 15%;
+            min-height: 650px;
+            text-align: center;
+            color: #E4E6EB;
+        }
+        body{
+            font-family: "Oswald", Arial, Tahoma;
+        }
+        h1{
+            background: url("img/icon.png") no-repeat 50px 5px;
+            background-size: 48px 48px;
+            color: #E4E6EB;
+            padding: 10px 110px;
+            font-size: 2em;
+        }
+    </style>
 </head>
-<body>
-    <h1>HI</h1>
+<body style="overflow: auto;height: 100vh;margin: 0;padding: 0;width: 100vw;background-color: #18191A;color: #fff;">
+    <header class="header">
+        <div class="logo">
+            <img src="img/icon.png" width="128" height="128">
+        </div>
+        <div style="font-size: 3em;">網頁拉桿修改器</div>
+        <div style="font-size: 1.5em;padding-top: 0.5em;">設計出專屬於你的風格！</div>
+    </header>
+    <h1>拉桿顯示</h1>
 </body>
 <script>
-    $("body").append(`<h1>HII</h1>`);
+    // *::-webkit-scrollbar { /*整體*/
+    //         width: 3vw;
+    //     height: 3vh;
+    // }
+    // *::-webkit-scrollbar-thumb{ /*拉感*/
+    //     background-color:aqua;
+    // }
+    // *::-webkit-scrollbar-track{ /*背景*/
+    //     background-color:red;
+    //     border: 10px solid blue;
+    // }
 </script>
 </html>
