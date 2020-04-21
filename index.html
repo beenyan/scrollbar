@@ -2,52 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>拉桿美術調整</title>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-    <style>
-        *{
-            box-sizing: border-box;
-        }
-        .header{
-            padding-top: 15%;
-            min-height: 650px;
-            text-align: center;
-            color: #E4E6EB;
-        }
-        body{
-            font-family: "Oswald", Arial, Tahoma;
-        }
-        h1{
-            background: url("img/icon.png") no-repeat 50px 5px;
-            background-size: 48px 48px;
-            color: #E4E6EB;
-            padding: 10px 110px;
-            font-size: 2em;
-        }
-    </style>
+    <title>滾動條藝術師</title>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/main.js"></script>
 </head>
-<body style="overflow: auto;height: 100vh;margin: 0;padding: 0;width: 100vw;background-color: #18191A;color: #fff;">
-    <header class="header">
-        <div class="logo">
-            <img src="img/icon.png" width="128" height="128">
+<body></body>
+    <div id="dark_scrim"></div>
+
+    <div class="title">
+        <div class="title_box">
+            <div class="title_left">
+                <div id="guide" class="guide">
+                    <div class="title_line"></div><div class="title_line"></div><div class="title_line"></div>
+                </div>
+            </div>
+            <div class="logo"></div>
+            <div style="display: inline-block;padding: 0 10px;font-size: 1.2em;color: wheat;">捲軸藝術</div>
+            <div></div>
+            <div class="little_object">
+                <img src="img/down.png">
+            </div>
         </div>
-        <div style="font-size: 3em;">網頁拉桿修改器</div>
+    </div>
+
+    <tool-show>
+        <div class="title_box tool_title" style="border-bottom: 1px solid #393A3B;position: relative;">
+            <div class="title_left">
+                <div class="guide">
+                    <div class="title_line"></div><div class="title_line"></div><div class="title_line"></div>
+                </div>
+            </div>
+            <div class="logo"></div>
+            <div style="display: inline-block;padding: 0 10px;font-size: 1.2em;color: wheat;">捲軸藝術</div>
+        </div>
+    </tool-show>
+    <header class="header">
+        <div style="font-size: 3em;">網頁滾動條修改器</div>
         <div style="font-size: 1.5em;padding-top: 0.5em;">設計出專屬於你的風格！</div>
     </header>
-    <h1>拉桿顯示</h1>
+    <h1>關於此產品</h1>
+
 </body>
-<script>
-    // *::-webkit-scrollbar { /*整體*/
-    //         width: 3vw;
-    //     height: 3vh;
-    // }
-    // *::-webkit-scrollbar-thumb{ /*拉感*/
-    //     background-color:aqua;
-    // }
-    // *::-webkit-scrollbar-track{ /*背景*/
-    //     background-color:red;
-    //     border: 10px solid blue;
-    // }
-</script>
 </html>

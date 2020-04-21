@@ -1,0 +1,129 @@
+:root{
+    --main_dark : #18191A;
+    --sub_dark : #242526;
+    --light_dark : #3A3B3C;
+    --border_dark : #393A3B;
+}
+.header{
+    padding-top: 15%;
+    min-height: 650px;
+    text-align: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--main_dark);
+    color: #E4E6EB;
+}
+h1{
+    background: url("img/icon.png") no-repeat 50px 5px;
+    background-size: 48px 48px;
+    padding: 10px 110px;
+    font-size: 2em;
+}
+.title{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    background-color: var(--sub_dark);
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid var(--border_dark);
+    overflow: hidden;
+    z-index: 100;
+}
+.title_box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    padding: 0 16px;    
+    grid-template-columns: 56px 40px 120px auto 160px;
+}
+.logo{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("img/icon.png") no-repeat;
+    background-size: 40px 40px;
+}
+.title_left{
+    display: inline-block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    margin: 0 16px 0 0;
+    padding: 8px;
+    transition: 0.5s;
+}
+.title_line{
+    width: 18px;
+    height: 2px;
+    background-color: #E4E6EB;
+}
+.guide{
+    width: 24px;
+    height: 24px;
+    display: grid;
+    justify-items: center;
+    padding: 6px 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    grid-template-rows: 5px 5px auto;
+}
+.title_left:active{
+    background-color: #c7c7c77c;
+}
+tool-show{
+    z-index: 200;
+    transition: 200ms;
+    position: fixed;
+    height: 100%;
+    background-color: var(--sub_dark);
+    width: 240px;
+    left: -240px;
+    overflow: hidden;
+}
+tool-show[opened]{
+    left: 0;
+}
+.tool_title{
+    height: 60px;
+    grid-template-columns: 56px 40px 112px;
+}
+#dark_scrim[opened]{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 199;
+}
+.little_object{
+    display: inline-block;
+    justify-self: right;
+    width: 40px;
+    height: 40px;
+}
+.little_object img{
+    pointer-events: none;
+    margin: 10px;
+    float: left;
+}
+.little_object::after{
+    content: '';
+    cursor: pointer;
+    transition: 200ms;
+    display: block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light_dark);
+}
+.little_object:hover::after{
+    background-color: #4e4f50;
+}
