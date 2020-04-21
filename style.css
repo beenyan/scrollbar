@@ -16,7 +16,7 @@ body{
     color: #E4E6EB;
 }
 h1{
-    background: url("img/icon.png") no-repeat 50px 5px;
+    background: url("https://raw.githubusercontent.com/beenyan/scrollbar/master/img/icon.png") no-repeat 50px 5px;
     background-size: 48px 48px;
     padding: 10px 110px;
     font-size: 2em;
@@ -46,7 +46,7 @@ h1{
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: url("img/icon.png") no-repeat;
+    background: url("https://raw.githubusercontent.com/beenyan/scrollbar/master/img/icon.png") no-repeat;
     background-size: 40px 40px;
 }
 .title_left{
