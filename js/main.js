@@ -10,3 +10,8 @@ $(function(){
         }
     });
 })
+try {
+    
+} catch (error) {
+    
+}
