@@ -269,9 +269,6 @@ tool-bar[opened]{
     left: 100%;
     transform: translateX(-100%);
 }
-.header{
-    display: none;
-}
 .select{
     display: grid;
     font-size: 120%;
