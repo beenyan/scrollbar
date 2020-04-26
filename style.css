@@ -19,6 +19,7 @@ body{
     padding: 0;
     background-color: var(--main_dark);
     color: var(--word);
+    font-family: "微軟正黑體";
 }
 h1{
     background: url("img/icon.png") no-repeat 50px 5px;
@@ -221,6 +222,10 @@ tool-bar[opened]{
 .bar[check=false] .bar_background{
     background-color: rgba(46, 73, 73, 0.527);
 }
+.bar[check=false] .bar_check::before{
+    content: '否';
+    color: rgb(122, 122, 122);
+}
 .bar_check{
     --height : 32px;
     position: relative;
@@ -233,6 +238,14 @@ tool-bar[opened]{
     justify-self: right;
     border-radius: 40px;
     padding: 3px;
+}
+.bar_check::before{
+    content: '是';
+    transition: 200ms;
+    position: absolute;
+    display: block;
+    left: -50%;
+    font-size: 0.8em;
 }
 .bar_background{
     position: relative;

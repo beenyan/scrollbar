@@ -7,6 +7,9 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="js/main.js"></script>
+    <script src="js/function.js"></script>
+    <style class="webkitscrollbar_show"></style>
+    <style class="webkitscrollbar_main"></style>
 </head>
 <!-- checkbox
     <div class="package">
@@ -71,6 +74,23 @@
     </div>
     <h1>滾動條主體</h1>
     <div class="content">
+        <div class="package" style="width: 100%;">
+            <div onclick="webkitscrollbar(this)" class="bar" check="true">
+                <span>顯示滾動條</span>
+                <div class="bar_check">
+                    <div class="bar_background">
+                        <div class="bar_round"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function webkitscrollbar(self){
+                if ($(".content:eq(1) .bar:eq(0)").attr("check") !== "true") return false;
+                if ($(self).attr("check") === "false") $(".webkitscrollbar_show").text("*::-webkit-scrollbar{display:unset}"); //顯示
+                else $(".webkitscrollbar_show").text("*::-webkit-scrollbar{display:none}"); //不顯示
+            }
+        </script>
         <div class="package" style="display: block;">
             <div class="select">
                 <span>寬度：</span>
