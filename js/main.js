@@ -21,7 +21,7 @@ $(function(){
     });
     $(".content:eq(1) input[type=number],.content:eq(1) .unit").change(e => { //滾動條主體改變生成CSS
         let val = getval(".content:eq(1) input[type=number],.content:eq(1) .unit");
-        $("head").append(`*::-webkit-scrollbar{width:${val[0]+val[1]}px;height:${val[2]+val[3]}px;}`);
+        $("head").append(`<style>*::-webkit-scrollbar{width:${val[0]+val[1]}px;height:${val[2]+val[3]}px;}</style>`);
     });
     function getval(select){
         let temp = [];
