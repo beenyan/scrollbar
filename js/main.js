@@ -3,7 +3,7 @@ $(function(){
     ["px","em","%","vw","vh","vmin","vmax","in","cm","mm","rem"].forEach(e=>{$(".unit").append(`<option value="${e}">${e}</option>`)});
     $("input[type=number]").keyup(e => {
         let self = e.currentTarget;
-        $(self).val(($(self).val() > 1000)?1000:$(self).val());
+        $(self).val(($(self).val() > 1000)?1000:($(self).val() === "")?0:$(self).val());
     });
     $(".guide,#dark_scrim").click(() => { //左側遮布
         if ($("tool-bar").attr("opened") === undefined){
@@ -19,4 +19,13 @@ $(function(){
         let self = e.currentTarget;
         $(self).attr("check",$(self).attr("check") === "false");
     });
+    $(".content:eq(1) input[type=number],.content:eq(1) .unit").change(e => { //滾動條主體改變生成CSS
+        let val = getval(".content:eq(1) input[type=number],.content:eq(1) .unit");
+        $("head").append(`*::-webkit-scrollbar{width:${val[0]+val[1]}px;height:${val[2]+val[3]}px;}`);
+    });
+    function getval(select){
+        let temp = [];
+        $(select).each((index,self) => {temp.push($(self).val())});
+        return temp;
+    };
 })
