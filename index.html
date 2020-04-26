@@ -7,9 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <script src="js/main.js"></script>
 </head>
-<body></body>
+<!-- checkbox
+    <div class="package">
+        <div class="fake_checkbox" check="false">
+            <div class="true_checkbox">
+                <span class="true_checkbox_fill"></span>
+            </div>
+            <span>文字</span>
+        </div>
+    </div>
+-->
+<!-- bar
+    <div class="package" style="width: 100%;">
+        <div class="bar" check="true">
+            <span>文字</span>
+            <div class="bar_check">
+                <div class="bar_background">
+                    <div class="bar_round"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+ -->
+<body>
+    <!-- 不直接顯示 -->
     <div id="dark_scrim"></div>
-
+    <!-- 最上行顯示 -->
     <div class="title">
         <div class="title_box">
             <div class="title_left">
@@ -18,15 +41,15 @@
                 </div>
             </div>
             <div class="logo"></div>
-            <div style="display: inline-block;padding: 0 10px;font-size: 1.2em;color: wheat;">捲軸藝術</div>
+            <div style="display: inline-block;padding: 0 10px;font-size: 1.2em;color: wheat;">滾動條藝術</div>
             <div></div>
             <div class="little_object">
                 <img src="img/down.png">
             </div>
         </div>
     </div>
-
-    <tool-show>
+    <!-- 互動物件(左邊拉霸) -->
+    <tool-bar>
         <div class="title_box tool_title" style="border-bottom: 1px solid #393A3B;position: relative;">
             <div class="title_left">
                 <div class="guide">
@@ -34,14 +57,51 @@
                 </div>
             </div>
             <div class="logo"></div>
-            <div style="display: inline-block;padding: 0 10px;font-size: 1.2em;color: wheat;">捲軸藝術</div>
+            <div style="display: inline-block;padding: 0 10px;font-size: 1.2em;color: wheat;">滾動條藝術</div>
         </div>
-    </tool-show>
+    </tool-bar>
+    <!-- 主要內容 -->
     <header class="header">
         <div style="font-size: 3em;">網頁滾動條修改器</div>
         <div style="font-size: 1.5em;padding-top: 0.5em;">設計出專屬於你的風格！</div>
     </header>
-    <h1>關於此產品</h1>
+    <h1>關於此網頁</h1>
+    <div class="content">
+    </div>
+    <h1>滾動條主體</h1>
+    <div class="content">
+        <div class="package" style="display: block;">
+            <div class="select">
+                <span>寬度：</span>
+                <input type="number" value="0">
+                <select class="unit"></select>
+            </div>
+        </div>
+        <div class="package" style="display: block;">
+            <div class="select">
+                <span>寬度：</span>
+                <input type="number" value="0">
+                <select class="unit"></select>
+            </div>
+        </div>
+    </div>
 
+    <h1>滾動條按鈕</h1>
+    <div class="content">
+        
+    </div>
+    <h1>滾動條</h1>
+    <div class="content">
+        
+    </div>
+    <h1>滾動條軌道</h1>
+    <div class="content">
+        
+    </div>
+    <h1>滾動條交界</h1>
+    <div class="content">
+        
+    </div>
+    <div style="width: 110vw;height: 1px;"></div>
 </body>
 </html>

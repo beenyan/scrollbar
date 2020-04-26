@@ -3,6 +3,11 @@
     --sub_dark : #242526;
     --light_dark : #3A3B3C;
     --border_dark : #393A3B;
+    --box_border_dark : #3E4042;
+    --word : #E4E6EB;
+}
+div{
+    vertical-align: top;
 }
 .header{
     padding-top: 15%;
@@ -13,13 +18,25 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--main_dark);
-    color: #E4E6EB;
+    color: var(--word);
 }
 h1{
     background: url("img/icon.png") no-repeat 50px 5px;
     background-size: 48px 48px;
     padding: 10px 110px;
     font-size: 2em;
+    white-space: nowrap;
+}
+h2{
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 1.6em;
+    border-bottom : 5px solid var(--box_border_dark);
+}
+.hr{
+    margin: 0;
+    border: unset;
+    border-bottom : 5px solid var(--box_border_dark);
 }
 .title{
     box-sizing: border-box;
@@ -62,7 +79,7 @@ h1{
 .title_line{
     width: 18px;
     height: 2px;
-    background-color: #E4E6EB;
+    background-color: var(--word);
 }
 .guide{
     width: 24px;
@@ -77,22 +94,22 @@ h1{
 .title_left:active{
     background-color: #c7c7c77c;
 }
-tool-show{
+tool-bar{
     z-index: 200;
     transition: 200ms;
     position: fixed;
     height: 100%;
     background-color: var(--sub_dark);
-    width: 240px;
-    left: -240px;
+    width: 260px;
+    left: -260px;
     overflow: hidden;
 }
-tool-show[opened]{
+tool-bar[opened]{
     left: 0;
 }
 .tool_title{
     height: 60px;
-    grid-template-columns: 56px 40px 112px;
+    grid-template-columns: 56px 40px auto;
 }
 #dark_scrim[opened]{
     position: fixed;
@@ -126,4 +143,220 @@ tool-show[opened]{
 }
 .little_object:hover::after{
     background-color: #4e4f50;
+}
+.content{
+    background-color: var(--sub_dark);
+    margin: 0 50px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 10px 20px;
+}
+.package{
+    box-sizing: border-box;
+    display: inline-block;
+}
+.fake_checkbox{
+    box-sizing: border-box;
+    position: relative;
+    display: grid;
+    grid-template-columns: 24px auto;
+    grid-gap: 10px;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    font-size: 1.4em;
+    background-color: black;
+    padding: 0 16px;
+    cursor: pointer;
+}
+.fake_checkbox[check=false] .true_checkbox{
+    border : 1px solid gray;
+}
+.fake_checkbox[check=false] .true_checkbox_fill{
+    display: none;
+}
+.true_checkbox{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border : 1.5px solid aqua;
+    border-radius: 50%;
+    text-align: center;
+    justify-self : center;
+}
+.true_checkbox_fill{
+    display: inline-block;
+    position: absolute;
+    background-color: aqua;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+.bar{
+    cursor: pointer;
+    display: grid;
+    height: 60px;
+    font-size: 1.4em;
+    margin: 0 16px;
+    align-items: center;
+    grid-template-columns: auto auto;
+    border-bottom : 5px solid var(--box_border_dark);
+}
+.content .package:last-child .bar{
+    border : unset;
+}
+.bar[check=false] .bar_round{
+    background-color: #606770;
+    left: 0%;
+    transform: translateX(0);
+}
+.bar[check=false] .bar_check{
+    border : 1px solid #5c8a8a;
+}
+.bar[check=false] .bar_background{
+    background-color: rgba(46, 73, 73, 0.527);
+}
+.bar_check{
+    --height : 32px;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    border : 1px solid #5ae0e0;
+    transition: 200ms;
+    height: var(--height);
+    width: 60px;
+    justify-self: right;
+    border-radius: 40px;
+    padding: 3px;
+}
+.bar_background{
+    position: relative;
+    box-sizing: border-box;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    transition: 200ms;
+    background-color: rgba(46, 110, 110, 0.527);
+    padding: 2px 2px;
+}
+.bar_round{
+    position: relative;
+    display: inline-block;
+    transition: 200ms;
+    width: calc(var(--height) - 12px);
+    height: 100%;
+    border-radius: 50%;
+    background-color: aqua;
+    left: 100%;
+    transform: translateX(-100%);
+}
+.header{
+    display: none;
+}
+.select{
+    display: grid;
+    font-size: 120%;
+    font-size: 1.4em;
+    margin: 0 16px;
+    height: 60px;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    width: 244px;
+}
+input[type=number]{
+    width: 50px;
+    text-align: right;
+}
+input[type=number],select,option{
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: unset;
+    border: unset;
+    color: var(--word);
+}
+select{
+    cursor: pointer;
+}
+option{
+    background-color: rgba(0,0,0,1);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+
+
+
+
+  *::-webkit-scrollbar {
+    width:34px;
+    height:34px;
+  }
+  *::-webkit-scrollbar-button {
+    display: block;
+    width: 34px;
+    height: 34px;
+  }
+  
+  *::-webkit-scrollbar-button:decrement:start {
+    display: block;
+    background-color:lightblue;
+    background: url("img/icon.png") no-repeat;
+    display: block;
+    background-size: 100% 100%;
+    border:2px solid black;
+  }
+  
+  *::-webkit-scrollbar-button:increment:start {
+    display: block;
+    background-color:lightgreen;
+    border:5px solid red;
+  }
+  
+  *::-webkit-scrollbar-button:decrement:end {
+    display: block;
+    background-color:orange;
+    border:2px solid black;
+  }
+  
+  *::-webkit-scrollbar-button:increment:end {
+    display: block;
+    background-color:brown;
+    border:2px solid black;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    min-width:20px;
+    min-height:20px;
+    background-color: navy;
+    border:2px solid #cccccc;
+  }
+  *::-webkit-scrollbar-track-piece:decrement {
+    background-color: red;
+  } 
+  *::-webkit-scrollbar-track-piece:decrement:hover {
+    background-color: green;
+  }
+  *::-webkit-scrollbar-track-piece:increment {
+    background-color: pink;
+  }
+  *::-webkit-scrollbar-button:decrement:hover {
+    background-color: aqua;
+ }
+ *::-webkit-scrollbar-button:increment:active {
+   background-color: wheat;
+   border-radius: 50%;
+}
+*::-webkit-scrollbar-corner { 
+    display: block;
+    background-color: royalblue;
+    border-radius: 50%;
 }
