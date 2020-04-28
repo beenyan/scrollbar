@@ -358,6 +358,7 @@ input::-webkit-inner-spin-button {
 .color{
     cursor: unset;
     width: 242px;
+    height: 60px;
 }
 .color-picker [type=text],.color-picker [type=color]{
     position: absolute;
