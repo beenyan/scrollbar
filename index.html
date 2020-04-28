@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="js/main.js"></script>
     <script src="js/function.js"></script>
-    <style class="webkitscrollbar_show"></style>
-    <style class="webkitscrollbar_main"></style>
+    <style class="all webkitscrollbar webkitscrollbar_show" type="text/css"></style>
+    <style class="all webkitscrollbar webkitscrollbar_main" type="text/css"></style>
 </head>
 <!-- checkbox
     <div class="package">
@@ -66,6 +66,7 @@
     </tool-bar>
     <!-- 主要內容 -->
     <header class="header">
+        <div class="biglogo"></div>
         <div style="font-size: 3em;">網頁滾動條修改器</div>
         <div style="font-size: 1.5em;padding-top: 0.5em;">設計出專屬於你的風格！</div>
     </header>
@@ -86,19 +87,18 @@
         </div>
         <script>
             function webkitscrollbar(self){
-                if ($(".content:eq(1) .bar:eq(0)").attr("check") !== "true") return false;
-                if ($(self).attr("check") === "false") $(".webkitscrollbar_show").text("*::-webkit-scrollbar{display:unset}"); //顯示
+                if ($(self).attr("check") === "false") $(".webkitscrollbar_show").text(""); //顯示
                 else $(".webkitscrollbar_show").text("*::-webkit-scrollbar{display:none}"); //不顯示
             }
         </script>
-        <div class="package" style="display: block;">
+        <div class="sub package" style="display: block;">
             <div class="select">
                 <span>寬度：</span>
                 <input type="number" value="0">
                 <select class="unit"></select>
             </div>
         </div>
-        <div class="package" style="display: block;">
+        <div class="sub package" style="display: block;">
             <div class="select">
                 <span>寬度：</span>
                 <input type="number" value="0">
@@ -109,7 +109,217 @@
 
     <h1>滾動條按鈕</h1>
     <div class="content">
-        
+        <div class="sub package" style="width: 100%;">
+            <div class="package" style="width: 100%;">
+                <span class="word">
+                    <span>按鈕顯示</span>
+                </span>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="button1" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>上半部─上方<br>左半部─左方</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="button2" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>上半部─下方<br>左半部─右方</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="button3" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>下半部─上方<br>右半部─左方</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="button4" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>下半部─下方<br>右半部─右方</span>
+                </div>
+            </div>
+            <div class="margin"></div>
+        </div>
+        <div id="button1" class="package" style="width: 100%;">
+            <div class="package" style="width: 100%;">
+                <span class="word">
+                    <span>上半部─上方 & 左半部─左方</span>
+                </span>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select">
+                    <span>寬度：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select">
+                    <span>高度：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="width: 180px;">
+                <div class="word" style="border:unset;height: 60px;margin: 16px;grid-template-columns: 100px;">
+                    <span style="width: 100px;display: inline-block;">邊界角度</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>左上：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>右上：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>左下：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>右下：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <span class="word">
+                    <span>按鈕背景圖示</span>
+                </span>
+            </div>
+            <div class="sub package">
+                <div class="fake_checkbox" for="" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>圖片</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>顏色</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>邊框</span>
+                </div>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                    <span>圖片網址：</span>
+                    <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                </div>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select" style="border: unset;width: 270px;">
+                    <span>顏色&nbsp&nbsp旋轉角度：</span>
+                    <input type="number" class="deg" value="0">
+                    <span>deg</span>
+                </div>
+            </div>
+            <div class="subb package">
+                <div class="color">
+                    <div>1.</div>
+                    <div class="color-picker">
+                        <input type="color" value="#E4E6EB">
+                        <input type="text" class="keyin" value="#E4E6EB">
+                    </div>
+                </div>
+            </div>
+            <div class="margin"></div>
+        </div>
+        <div id="button2" class="package" style="width: 100%;">
+            <div class="package" style="width: 100%;">
+                <span class="word">
+                    <span>上半部─下方 & 左半部─右方</span>
+                </span>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select">
+                    <span>寬度：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select">
+                    <span>高度：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="margin"></div>
+        </div>
+        <div id="button3" class="package" style="width: 100%;">
+            <div class="package" style="width: 100%;">
+                <span class="word">
+                    <span>下半部─上方 & 右半部─左方</span>
+                </span>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select">
+                    <span>寬度：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select">
+                    <span>高度：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="margin"></div>
+        </div>
+        <div id="button4" class="package" style="width: 100%;">
+            <div class="package" style="width: 100%;">
+                <span class="word">
+                    <span>上半部─下方 & 右半部─右方</span>
+                </span>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select">
+                    <span>寬度：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="display: block;">
+                <div class="select">
+                    <span>高度：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+        </div>
     </div>
     <h1>滾動條</h1>
     <div class="content">
@@ -123,6 +333,5 @@
     <div class="content">
         
     </div>
-    <div style="width: 110vw;height: 1px;"></div>
 </body>
 </html>

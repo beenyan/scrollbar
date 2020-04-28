@@ -4,6 +4,7 @@
     --light_dark : #3A3B3C;
     --border_dark : #393A3B;
     --box_border_dark : #3E4042;
+    --check_background : #2e2e2e;
     --word : #E4E6EB;
 }
 div{
@@ -29,9 +30,12 @@ h1{
     white-space: nowrap;
 }
 h2{
-    margin: 0;
-    padding: 15px 20px;
-    font-size: 1.6em;
+    font-size: 1.4em;
+    color: var(--word);
+    font-weight: unset;
+    height: 60px;
+    margin: 0 16px;
+    align-items: center;
     border-bottom : 5px solid var(--box_border_dark);
 }
 .hr{
@@ -67,6 +71,15 @@ h2{
     background: url("img/icon.png") no-repeat;
     background-size: 40px 40px;
 }
+.biglogo{
+    position: relative;
+    display: inline-block;
+    margin: 10px 0;
+    width: 128px;
+    height: 128px;
+    background: url("img/icon.png") no-repeat;
+    background-size: 128px 128px;
+}
 .title_left{
     display: inline-block;
     border-radius: 50%;
@@ -96,6 +109,7 @@ h2{
     background-color: #c7c7c77c;
 }
 tool-bar{
+    top: 0;
     z-index: 200;
     transition: 200ms;
     position: fixed;
@@ -157,7 +171,7 @@ tool-bar[opened]{
     box-sizing: border-box;
     display: inline-block;
 }
-.fake_checkbox{
+.fake_checkbox,.color{
     box-sizing: border-box;
     position: relative;
     display: grid;
@@ -165,11 +179,15 @@ tool-bar[opened]{
     grid-gap: 10px;
     align-items: center;
     width: 250px;
-    height: 60px;
+    height: 70px;
     font-size: 1.4em;
-    background-color: black;
-    padding: 0 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+    background-color: var(--check_background);
+    padding: 4px 16px;
     cursor: pointer;
+    border-radius: 6px;
+    box-shadow: inset 1px 1px rgb(100, 102, 104), 2px 2px 2px var(--main_dark);
 }
 .fake_checkbox[check=false] .true_checkbox{
     border : 1px solid gray;
@@ -198,7 +216,7 @@ tool-bar[opened]{
     left: 50%;top: 50%;
     transform: translate(-50%,-50%);
 }
-.bar{
+.bar,.word{
     cursor: pointer;
     display: grid;
     height: 60px;
@@ -207,6 +225,9 @@ tool-bar[opened]{
     align-items: center;
     grid-template-columns: auto auto;
     border-bottom : 5px solid var(--box_border_dark);
+}
+.word{
+    cursor: unset;
 }
 .content .package:last-child .bar{
     border : unset;
@@ -271,13 +292,35 @@ tool-bar[opened]{
 }
 .select{
     display: grid;
+    font-size: 1.4em;
+    margin: 16px;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0 16px;
+    height: 60px;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    width: 244px;
+    background-color: var(--check_background);
+    border-radius: 6px;
+    box-shadow: inset 1px 1px rgb(100, 102, 104), 2px 2px 2px var(--main_dark);
+}
+.input{
+    display: grid;
     font-size: 120%;
     font-size: 1.4em;
     margin: 0 16px;
     height: 60px;
     align-items: center;
-    grid-template-columns: auto auto auto;
-    width: 244px;
+    grid-template-columns: auto auto;
+    width: 400px;
+}
+.keyin{
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: unset;
+    border: unset;
+    color: var(--word);
 }
 input[type=number]{
     width: 50px;
@@ -300,6 +343,40 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+.sub{
+    padding-left: 20px;
+}
+.subb{
+    padding-left: 80px;
+}
+.margin{
+    margin: 32px;
+}
+.header{
+    display: none;
+}
+.color{
+    cursor: unset;
+    width: 242px;
+}
+.color-picker [type=text],.color-picker [type=color]{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    border: unset;
+    padding: 0;
+    outline: none;
+}
+.color-picker [type=text]{
+    z-index: 1;
+    background-color: var(--check_background);
+    pointer-events: none;
+}
+.color-picker [type=color]{
+    cursor: pointer;
+    z-index: 0;
+}
 
 
 
@@ -318,16 +395,12 @@ input::-webkit-inner-spin-button {
   
   *::-webkit-scrollbar-button:decrement:start {
     display: block;
-    background-color:lightblue;
-    background: url("img/icon.png") no-repeat;
-    display: block;
-    background-size: 100% 100%;
-    border:2px solid black;
+    background-image: url("img/icon.png"), linear-gradient(45deg,red,aqua);
+    border : 2px solid black;
   }
   
   *::-webkit-scrollbar-button:increment:start {
     display: block;
-    background-color:lightgreen;
     border:5px solid red;
   }
   
@@ -352,8 +425,9 @@ input::-webkit-inner-spin-button {
   *::-webkit-scrollbar-track-piece:decrement {
     background-color: red;
   } 
-  *::-webkit-scrollbar-track-piece:decrement:hover {
-    background-color: green;
+  *::-webkit-scrollbar-track-piece:decrement:active {
+    background: url("img/icon.png");
+    background-size: 100% 20%;
   }
   *::-webkit-scrollbar-track-piece:increment {
     background-color: pink;
