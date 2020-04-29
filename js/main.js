@@ -22,6 +22,14 @@ $(function(){
     $(".fake_checkbox,.bar").click(e => {
         let self = e.currentTarget;
         $(self).attr("check",$(self).attr("check") === "false");
+        if ($(self).attr("for") !== undefined){
+            let fo = $(self).attr("for");
+            let bool = $(self).attr("check");
+            if (bool === "true"){
+                $(`#${fo}`).attr("opened","");
+            }
+            else $(`#${fo}`).removeAttr("opened");
+        }
     });
     $(".content:eq(1) input[type=number],.content:eq(1) .unit").change(e => { //滾動條主體改變生成CSS
         let val = getval(".content:eq(1) input[type=number],.content:eq(1) .unit");
@@ -39,4 +47,18 @@ $(function(){
         $(self).siblings(".keyin").val($(self).val());
         $(self).siblings(".keyin").css("color",$(self).val());
     })
+    $("body").on("click",".increase",e => {
+        let self = e.currentTarget;
+        let num = parseInt($(self).parents(".color-show").children(".color-main").last().children().children("span").text());
+        $(self).parents(".color-show").children(".margin").before(`<div class="subb package color-main" style="display: block;"><div class="color"><span>${num + 1}.</span><div class="color-picker"><input type="color" value="#E4E6EB"><input type="text" class="keyin" value="#E4E6EB"></div><div class="delete-color">-</div></div></div>`);
+    });
+    $("body").on("click",".delete-color",e => {
+        let self = e.currentTarget;
+        let colormain = $(self).parents(".color-show");
+        $(self).parents(".color-main").remove(); //刪除自己
+        colormain.children(".color-main").each((index,e) => {$(e).children().children("span").text(index+1+".")}); //重整數字
+    });
+    $("body").on("","",e => {
+        let self = e.currentTarget;
+    });
 })

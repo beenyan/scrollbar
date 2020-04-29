@@ -149,7 +149,7 @@
             </div>
             <div class="margin"></div>
         </div>
-        <div id="button1" class="package" style="width: 100%;">
+        <div id="button1" class="package button-show" style="width: 100%;">
             <div class="package" style="width: 100%;">
                 <span class="word">
                     <span>上半部─上方 & 左半部─左方</span>
@@ -208,7 +208,7 @@
                 </span>
             </div>
             <div class="sub package">
-                <div class="fake_checkbox" for="" check="false">
+                <div class="fake_checkbox" for="img-show1" check="false">
                     <div class="true_checkbox">
                         <span class="true_checkbox_fill"></span>
                     </div>
@@ -216,7 +216,7 @@
                 </div>
             </div>
             <div class="package">
-                <div class="fake_checkbox" for="" check="false">
+                <div class="fake_checkbox" for="color-show1" check="false">
                     <div class="true_checkbox">
                         <span class="true_checkbox_fill"></span>
                     </div>
@@ -224,38 +224,91 @@
                 </div>
             </div>
             <div class="package">
-                <div class="fake_checkbox" for="" check="false">
+                <div></div>
+                <div class="fake_checkbox" for="border-show1" check="false">
                     <div class="true_checkbox">
                         <span class="true_checkbox_fill"></span>
                     </div>
                     <span>邊框</span>
                 </div>
             </div>
-            <div class="sub package" style="display: block;">
-                <div class="select" style="width: 760px;grid-template-columns: auto auto;">
-                    <span>圖片網址：</span>
-                    <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+            <div id="img-show1" class="sub package img-show" style="display: block;">
+                <div class="package" style="display: block;">
+                    <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                        <span>圖片網址：</span>
+                        <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                    </div>
                 </div>
-            </div>
-            <div class="sub package" style="display: block;">
-                <div class="select" style="border: unset;width: 270px;">
-                    <span>顏色&nbsp&nbsp旋轉角度：</span>
-                    <input type="number" class="deg" value="0">
-                    <span>deg</span>
+                <div class="sub package" style="display: block;">
+                    <div class="select">
+                        <span>寬度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
                 </div>
+                <div class="sub package" style="display: block;">
+                    <div class="select">
+                        <span>高度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="margin"></div>
             </div>
-            <div class="subb package">
-                <div class="color">
-                    <div>1.</div>
-                    <div class="color-picker">
-                        <input type="color" value="#E4E6EB">
-                        <input type="text" class="keyin" value="#E4E6EB">
+            <div id="color-show1" class="sub package color-show">
+                <div class="package">
+                    <div class="select" style="border: unset;width: 270px;">
+                        <span>顏色&nbsp&nbsp旋轉角度：</span>
+                        <input type="number" class="deg" value="0">
+                        <span>deg</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="center">
+                        <div class="increase">+</div>
+                    </div>
+                </div>
+                <div class="subb package color-main" style="display: block;">
+                    <div class="color">
+                        <span>1.</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+                <div class="subb package color-main" style="display: block;">
+                    <div class="color">
+                        <span>2.</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+            <div id="border-show1" class="sub package border-show" style="display: block;">
+                <div class="package" style="display: block;">
+                    <div class="select">
+                        <span>邊框寬度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="package" style="display: block;">
+                    <div class="color" style="grid-template-columns: 68px auto;">
+                        <span>顏色：</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="margin"></div>
         </div>
-        <div id="button2" class="package" style="width: 100%;">
+        <div id="button2" class="package button-show" style="width: 100%;">
             <div class="package" style="width: 100%;">
                 <span class="word">
                     <span>上半部─下方 & 左半部─右方</span>
@@ -277,7 +330,7 @@
             </div>
             <div class="margin"></div>
         </div>
-        <div id="button3" class="package" style="width: 100%;">
+        <div id="button3" class="package button-show" style="width: 100%;">
             <div class="package" style="width: 100%;">
                 <span class="word">
                     <span>下半部─上方 & 右半部─左方</span>
@@ -299,7 +352,7 @@
             </div>
             <div class="margin"></div>
         </div>
-        <div id="button4" class="package" style="width: 100%;">
+        <div id="button4" class="package button-show" style="width: 100%;">
             <div class="package" style="width: 100%;">
                 <span class="word">
                     <span>上半部─下方 & 右半部─右方</span>
