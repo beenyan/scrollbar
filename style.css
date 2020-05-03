@@ -231,9 +231,6 @@ tool-bar[opened]{
 .word{
     cursor: unset;
 }
-.content .package:last-child .bar{
-    border : unset;
-}
 .bar[check=false] .bar_round{
     background-color: #606770;
     left: 0%;
@@ -418,9 +415,17 @@ input::-webkit-inner-spin-button {
     max-height: 152px;
 }
 .button-show[opened]{
-    max-height: 1550px;
+    max-height: 3490px;
 }
-
+.active,.hover{
+    max-height: 0;
+    overflow: hidden;
+    transition: 2s;
+}
+.active[opened],.hover[opened]{
+    max-height: 1100px;
+    overflow: auto;
+}
 
 
 
@@ -442,7 +447,7 @@ input::-webkit-inner-spin-button {
   }
   
   *::-webkit-scrollbar-button:increment:start {
-    display: block;
+    display: unset;
     border:5px solid red;
   }
   

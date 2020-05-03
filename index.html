@@ -10,6 +10,9 @@
     <script src="js/function.js"></script>
     <style class="all webkitscrollbar webkitscrollbar_show" type="text/css"></style>
     <style class="all webkitscrollbar webkitscrollbar_main" type="text/css"></style>
+    <style class="all webkitscrollbar_button webkitscrollbar_main" type="text/css"></style>
+    <style class="all webkitscrollbar_button webkitscrollbar_active" type="text/css"></style>
+    <style class="all webkitscrollbar_button webkitscrollbar_hover" type="text/css"></style>
 </head>
 <!-- checkbox
     <div class="package">
@@ -109,7 +112,7 @@
 
     <h1>滾動條按鈕</h1>
     <div class="content">
-        <div class="sub package" style="width: 100%;">
+        <div class="sub package" id="scrollbar_button" style="width: 100%;">
             <div class="package" style="width: 100%;">
                 <span class="word">
                     <span>按鈕顯示</span>
@@ -306,8 +309,231 @@
                     </div>
                 </div>
             </div>
+            <div class="sub package" style="width: 100%;">
+                <div class="bar" for="active1" check="false">
+                    <span>active (滑鼠按下時)</span>
+                    <div class="bar_check">
+                        <div class="bar_background">
+                            <div class="bar_round"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="active1" class="active">
+                <div class="sub package">
+                    <div class="fake_checkbox" for="img-show2" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>圖片</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="fake_checkbox" for="color-show2" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>顏色</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div></div>
+                    <div class="fake_checkbox" for="border-show2" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>邊框</span>
+                    </div>
+                </div>
+                <div id="img-show2" class="sub package img-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                            <span>圖片網址：</span>
+                            <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>高度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="color-show2" class="sub package color-show">
+                    <div class="package">
+                        <div class="select" style="border: unset;width: 270px;">
+                            <span>顏色&nbsp&nbsp旋轉角度：</span>
+                            <input type="number" class="deg" value="0">
+                            <span>deg</span>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="center">
+                            <div class="increase">+</div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>1.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>2.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="border-show2" class="sub package border-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select">
+                            <span>邊框寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="package" style="display: block;">
+                        <div class="color" style="grid-template-columns: 68px auto;">
+                            <span>顏色：</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <div class="bar" for="hover1" check="false">
+                    <span>hover (滑鼠放置上方時)</span>
+                    <div class="bar_check">
+                        <div class="bar_background">
+                            <div class="bar_round"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hover1" class="hover">
+                <div class="sub package">
+                    <div class="fake_checkbox" for="img-show3" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>圖片</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="fake_checkbox" for="color-show3" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>顏色</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div></div>
+                    <div class="fake_checkbox" for="border-show3" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>邊框</span>
+                    </div>
+                </div>
+                <div id="img-show3" class="sub package img-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                            <span>圖片網址：</span>
+                            <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>高度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="color-show3" class="sub package color-show">
+                    <div class="package">
+                        <div class="select" style="border: unset;width: 270px;">
+                            <span>顏色&nbsp&nbsp旋轉角度：</span>
+                            <input type="number" class="deg" value="0">
+                            <span>deg</span>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="center">
+                            <div class="increase">+</div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>1.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>2.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="border-show3" class="sub package border-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select">
+                            <span>邊框寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="package" style="display: block;">
+                        <div class="color" style="grid-template-columns: 68px auto;">
+                            <span>顏色：</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="margin"></div>
         </div>
+        <hr class="hr" style="border-color: #32a7a7;">
         <div id="button2" class="package button-show" style="width: 100%;">
             <div class="package" style="width: 100%;">
                 <span class="word">
@@ -327,9 +553,368 @@
                     <input type="number" value="0">
                     <select class="unit"></select>
                 </div>
+            </div><div class="sub package" style="width: 180px;">
+                <div class="word" style="border:unset;height: 60px;margin: 16px;grid-template-columns: 100px;">
+                    <span style="width: 100px;display: inline-block;">邊界角度</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>左上：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>右上：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>左下：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>右下：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <span class="word">
+                    <span>按鈕背景圖示</span>
+                </span>
+            </div>
+            <div class="sub package">
+                <div class="fake_checkbox" for="img-show4" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>圖片</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="color-show4" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>顏色</span>
+                </div>
+            </div>
+            <div class="package">
+                <div></div>
+                <div class="fake_checkbox" for="border-show4" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>邊框</span>
+                </div>
+            </div>
+            <div id="img-show4" class="sub package img-show" style="display: block;">
+                <div class="package" style="display: block;">
+                    <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                        <span>圖片網址：</span>
+                        <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                    </div>
+                </div>
+                <div class="sub package" style="display: block;">
+                    <div class="select">
+                        <span>寬度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="sub package" style="display: block;">
+                    <div class="select">
+                        <span>高度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+            <div id="color-show4" class="sub package color-show">
+                <div class="package">
+                    <div class="select" style="border: unset;width: 270px;">
+                        <span>顏色&nbsp&nbsp旋轉角度：</span>
+                        <input type="number" class="deg" value="0">
+                        <span>deg</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="center">
+                        <div class="increase">+</div>
+                    </div>
+                </div>
+                <div class="subb package color-main" style="display: block;">
+                    <div class="color">
+                        <span>1.</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+                <div class="subb package color-main" style="display: block;">
+                    <div class="color">
+                        <span>2.</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+            <div id="border-show4" class="sub package border-show" style="display: block;">
+                <div class="package" style="display: block;">
+                    <div class="select">
+                        <span>邊框寬度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="package" style="display: block;">
+                    <div class="color" style="grid-template-columns: 68px auto;">
+                        <span>顏色：</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <div class="bar" for="active2" check="false">
+                    <span>active (滑鼠按下時)</span>
+                    <div class="bar_check">
+                        <div class="bar_background">
+                            <div class="bar_round"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="active2" class="active">
+                <div class="sub package">
+                    <div class="fake_checkbox" for="img-show5" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>圖片</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="fake_checkbox" for="color-show5" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>顏色</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div></div>
+                    <div class="fake_checkbox" for="border-show5" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>邊框</span>
+                    </div>
+                </div>
+                <div id="img-show5" class="sub package img-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                            <span>圖片網址：</span>
+                            <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>高度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="color-show5" class="sub package color-show">
+                    <div class="package">
+                        <div class="select" style="border: unset;width: 270px;">
+                            <span>顏色&nbsp&nbsp旋轉角度：</span>
+                            <input type="number" class="deg" value="0">
+                            <span>deg</span>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="center">
+                            <div class="increase">+</div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>1.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>2.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="border-show5" class="sub package border-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select">
+                            <span>邊框寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="package" style="display: block;">
+                        <div class="color" style="grid-template-columns: 68px auto;">
+                            <span>顏色：</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <div class="bar" for="hover2" check="false">
+                    <span>hover (滑鼠放置上方時)</span>
+                    <div class="bar_check">
+                        <div class="bar_background">
+                            <div class="bar_round"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hover2" class="hover">
+                <div class="sub package">
+                    <div class="fake_checkbox" for="img-show6" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>圖片</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="fake_checkbox" for="color-show6" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>顏色</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div></div>
+                    <div class="fake_checkbox" for="border-show6" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>邊框</span>
+                    </div>
+                </div>
+                <div id="img-show6" class="sub package img-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                            <span>圖片網址：</span>
+                            <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>高度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="color-show6" class="sub package color-show">
+                    <div class="package">
+                        <div class="select" style="border: unset;width: 270px;">
+                            <span>顏色&nbsp&nbsp旋轉角度：</span>
+                            <input type="number" class="deg" value="0">
+                            <span>deg</span>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="center">
+                            <div class="increase">+</div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>1.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>2.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="border-show6" class="sub package border-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select">
+                            <span>邊框寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="package" style="display: block;">
+                        <div class="color" style="grid-template-columns: 68px auto;">
+                            <span>顏色：</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="margin"></div>
         </div>
+        <hr class="hr" style="border-color: #32a7a7;">
         <div id="button3" class="package button-show" style="width: 100%;">
             <div class="package" style="width: 100%;">
                 <span class="word">
@@ -350,8 +935,368 @@
                     <select class="unit"></select>
                 </div>
             </div>
+            <div class="sub package" style="width: 180px;">
+                <div class="word" style="border:unset;height: 60px;margin: 16px;grid-template-columns: 100px;">
+                    <span style="width: 100px;display: inline-block;">邊界角度</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>左上：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>右上：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>左下：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>右下：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <span class="word">
+                    <span>按鈕背景圖示</span>
+                </span>
+            </div>
+            <div class="sub package">
+                <div class="fake_checkbox" for="img-show7" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>圖片</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="color-show7" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>顏色</span>
+                </div>
+            </div>
+            <div class="package">
+                <div></div>
+                <div class="fake_checkbox" for="border-show7" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>邊框</span>
+                </div>
+            </div>
+            <div id="img-show7" class="sub package img-show" style="display: block;">
+                <div class="package" style="display: block;">
+                    <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                        <span>圖片網址：</span>
+                        <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                    </div>
+                </div>
+                <div class="sub package" style="display: block;">
+                    <div class="select">
+                        <span>寬度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="sub package" style="display: block;">
+                    <div class="select">
+                        <span>高度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+            <div id="color-show7" class="sub package color-show">
+                <div class="package">
+                    <div class="select" style="border: unset;width: 270px;">
+                        <span>顏色&nbsp&nbsp旋轉角度：</span>
+                        <input type="number" class="deg" value="0">
+                        <span>deg</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="center">
+                        <div class="increase">+</div>
+                    </div>
+                </div>
+                <div class="subb package color-main" style="display: block;">
+                    <div class="color">
+                        <span>1.</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+                <div class="subb package color-main" style="display: block;">
+                    <div class="color">
+                        <span>2.</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+            <div id="border-show7" class="sub package border-show" style="display: block;">
+                <div class="package" style="display: block;">
+                    <div class="select">
+                        <span>邊框寬度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="package" style="display: block;">
+                    <div class="color" style="grid-template-columns: 68px auto;">
+                        <span>顏色：</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <div class="bar" for="active3" check="false">
+                    <span>active (滑鼠按下時)</span>
+                    <div class="bar_check">
+                        <div class="bar_background">
+                            <div class="bar_round"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="active3" class="active">
+                <div class="sub package">
+                    <div class="fake_checkbox" for="img-show8" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>圖片</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="fake_checkbox" for="color-show8" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>顏色</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div></div>
+                    <div class="fake_checkbox" for="border-show8" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>邊框</span>
+                    </div>
+                </div>
+                <div id="img-show8" class="sub package img-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                            <span>圖片網址：</span>
+                            <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>高度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="color-show8" class="sub package color-show">
+                    <div class="package">
+                        <div class="select" style="border: unset;width: 270px;">
+                            <span>顏色&nbsp&nbsp旋轉角度：</span>
+                            <input type="number" class="deg" value="0">
+                            <span>deg</span>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="center">
+                            <div class="increase">+</div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>1.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>2.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="border-show8" class="sub package border-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select">
+                            <span>邊框寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="package" style="display: block;">
+                        <div class="color" style="grid-template-columns: 68px auto;">
+                            <span>顏色：</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <div class="bar" for="hover3" check="false">
+                    <span>hover (滑鼠放置上方時)</span>
+                    <div class="bar_check">
+                        <div class="bar_background">
+                            <div class="bar_round"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hover3" class="hover">
+                <div class="sub package">
+                    <div class="fake_checkbox" for="img-show9" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>圖片</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="fake_checkbox" for="color-show9" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>顏色</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div></div>
+                    <div class="fake_checkbox" for="border-show9" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>邊框</span>
+                    </div>
+                </div>
+                <div id="img-show9" class="sub package img-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                            <span>圖片網址：</span>
+                            <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>高度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="color-show9" class="sub package color-show">
+                    <div class="package">
+                        <div class="select" style="border: unset;width: 270px;">
+                            <span>顏色&nbsp&nbsp旋轉角度：</span>
+                            <input type="number" class="deg" value="0">
+                            <span>deg</span>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="center">
+                            <div class="increase">+</div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>1.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>2.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="border-show9" class="sub package border-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select">
+                            <span>邊框寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="package" style="display: block;">
+                        <div class="color" style="grid-template-columns: 68px auto;">
+                            <span>顏色：</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="margin"></div>
         </div>
+        <hr class="hr" style="border-color: #32a7a7;">
         <div id="button4" class="package button-show" style="width: 100%;">
             <div class="package" style="width: 100%;">
                 <span class="word">
@@ -370,6 +1315,365 @@
                     <span>高度：</span>
                     <input type="number" value="0">
                     <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="width: 180px;">
+                <div class="word" style="border:unset;height: 60px;margin: 16px;grid-template-columns: 100px;">
+                    <span style="width: 100px;display: inline-block;">邊界角度</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>左上：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>右上：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>左下：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="package">
+                <div class="select" style="width: 200px;">
+                    <span>右下：</span>
+                    <input type="number" value="0">
+                    <select class="unit"></select>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <span class="word">
+                    <span>按鈕背景圖示</span>
+                </span>
+            </div>
+            <div class="sub package">
+                <div class="fake_checkbox" for="img-show10" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>圖片</span>
+                </div>
+            </div>
+            <div class="package">
+                <div class="fake_checkbox" for="color-show10" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>顏色</span>
+                </div>
+            </div>
+            <div class="package">
+                <div></div>
+                <div class="fake_checkbox" for="border-show10" check="false">
+                    <div class="true_checkbox">
+                        <span class="true_checkbox_fill"></span>
+                    </div>
+                    <span>邊框</span>
+                </div>
+            </div>
+            <div id="img-show10" class="sub package img-show" style="display: block;">
+                <div class="package" style="display: block;">
+                    <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                        <span>圖片網址：</span>
+                        <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                    </div>
+                </div>
+                <div class="sub package" style="display: block;">
+                    <div class="select">
+                        <span>寬度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="sub package" style="display: block;">
+                    <div class="select">
+                        <span>高度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+            <div id="color-show10" class="sub package color-show">
+                <div class="package">
+                    <div class="select" style="border: unset;width: 270px;">
+                        <span>顏色&nbsp&nbsp旋轉角度：</span>
+                        <input type="number" class="deg" value="0">
+                        <span>deg</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="center">
+                        <div class="increase">+</div>
+                    </div>
+                </div>
+                <div class="subb package color-main" style="display: block;">
+                    <div class="color">
+                        <span>1.</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+                <div class="subb package color-main" style="display: block;">
+                    <div class="color">
+                        <span>2.</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+                <div class="margin"></div>
+            </div>
+            <div id="border-show10" class="sub package border-show" style="display: block;">
+                <div class="package" style="display: block;">
+                    <div class="select">
+                        <span>邊框寬度：</span>
+                        <input type="number" value="0">
+                        <select class="unit"></select>
+                    </div>
+                </div>
+                <div class="package" style="display: block;">
+                    <div class="color" style="grid-template-columns: 68px auto;">
+                        <span>顏色：</span>
+                        <div class="color-picker">
+                            <input type="color" value="#E4E6EB">
+                            <input type="text" class="keyin" value="#E4E6EB">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <div class="bar" for="active4" check="false">
+                    <span>active (滑鼠按下時)</span>
+                    <div class="bar_check">
+                        <div class="bar_background">
+                            <div class="bar_round"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="active4" class="active">
+                <div class="sub package">
+                    <div class="fake_checkbox" for="img-show11" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>圖片</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="fake_checkbox" for="color-show11" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>顏色</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div></div>
+                    <div class="fake_checkbox" for="border-show11" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>邊框</span>
+                    </div>
+                </div>
+                <div id="img-show11" class="sub package img-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                            <span>圖片網址：</span>
+                            <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>高度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="color-show11" class="sub package color-show">
+                    <div class="package">
+                        <div class="select" style="border: unset;width: 270px;">
+                            <span>顏色&nbsp&nbsp旋轉角度：</span>
+                            <input type="number" class="deg" value="0">
+                            <span>deg</span>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="center">
+                            <div class="increase">+</div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>1.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>2.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="border-show11" class="sub package border-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select">
+                            <span>邊框寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="package" style="display: block;">
+                        <div class="color" style="grid-template-columns: 68px auto;">
+                            <span>顏色：</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub package" style="width: 100%;">
+                <div class="bar" for="hover4" check="false">
+                    <span>hover (滑鼠放置上方時)</span>
+                    <div class="bar_check">
+                        <div class="bar_background">
+                            <div class="bar_round"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hover4" class="hover">
+                <div class="sub package">
+                    <div class="fake_checkbox" for="img-show12" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>圖片</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div class="fake_checkbox" for="color-show12" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>顏色</span>
+                    </div>
+                </div>
+                <div class="package">
+                    <div></div>
+                    <div class="fake_checkbox" for="border-show12" check="false">
+                        <div class="true_checkbox">
+                            <span class="true_checkbox_fill"></span>
+                        </div>
+                        <span>邊框</span>
+                    </div>
+                </div>
+                <div id="img-show12" class="sub package img-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select" style="width: 760px;grid-template-columns: auto auto;">
+                            <span>圖片網址：</span>
+                            <input type="text" style="width: 640px;" class="keyin" placeholder="https://">
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="sub package" style="display: block;">
+                        <div class="select">
+                            <span>高度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="color-show12" class="sub package color-show">
+                    <div class="package">
+                        <div class="select" style="border: unset;width: 270px;">
+                            <span>顏色&nbsp&nbsp旋轉角度：</span>
+                            <input type="number" class="deg" value="0">
+                            <span>deg</span>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="center">
+                            <div class="increase">+</div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>1.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subb package color-main" style="display: block;">
+                        <div class="color">
+                            <span>2.</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+                <div id="border-show12" class="sub package border-show" style="display: block;">
+                    <div class="package" style="display: block;">
+                        <div class="select">
+                            <span>邊框寬度：</span>
+                            <input type="number" value="0">
+                            <select class="unit"></select>
+                        </div>
+                    </div>
+                    <div class="package" style="display: block;">
+                        <div class="color" style="grid-template-columns: 68px auto;">
+                            <span>顏色：</span>
+                            <div class="color-picker">
+                                <input type="color" value="#E4E6EB">
+                                <input type="text" class="keyin" value="#E4E6EB">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
